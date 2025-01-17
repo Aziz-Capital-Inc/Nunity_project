@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+}
+
+@font-face {
+  font-family: "Mustika";
+  src: url('/static/font/FontMustikaBold-Regular.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+.main-container {
+  margin: 30px;
+}
+.first_ul {
+  margin-top: 40px;
+  font-family: "Mustika";
+  font-size: x-small;
+}
+.first_ul li {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.first_ul_second_p {
+  border: 1.5px solid rgb(188, 188, 188);
+  text-align: center;
+  width: 55px;
+  height: 10px;
+  padding: 6px 5px;
+}
+.first_ul_img {
+  border-radius: 50%;
+}
+.li_date {
+  color: gray;
+}
+
+.first_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+}
+.second_middle_div {
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  font-size: small;
+}
+.second_center_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-family: sans-serif;
+  font-size: small;
+}
+.logo {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+.second_middle_div p {
+  color: #0862f4;
+}
+.second_center_div p {
+  color: #0862f4;
+}
+.second_section {
+  margin-top: 50px;
+  font-family: sans-serif;
+  font-size: large;
+  font-weight: 700;
+}
+.second_section_div {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  text-align: center;
+}
+form input {
+  width: 300px;
+  height: 10px;
+  border: 1.4px solid black;
+  padding: 10px;
+}
+.row-text {
+  font-family: sans-serif;
+  font-size: small;
+  border: 1px solid black;
+  width: fit-content;
+  text-align: center;
+}
+.middle-section {
+  display: flex;
+  justify-content: center;
+}
+.middle-section-first-div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 70%;
+}
+.row-text p {
+  padding-top: 3px;
+}
+.row-text p:nth-of-type(1) {
+  font-weight: 700;
+}
+.last-section div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  font-family: "Mustika";
+}
+.last-section div p:nth-last-child(2) {
+  font-size: xx-large;
+}
+
+/* LOGIN PAGE */
+.login-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.login-section > div {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.login-head p:nth-of-type(1) {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Mustika";
+}
+.login-head p:nth-of-type(2) {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: sans-serif;
+  color: rgb(70, 70, 70);
+}
+
+.login-form {
+  box-shadow: -2px 2px 12px 1px rgb(0 0 0 / 20%);
+  padding: 20px;
+  border-radius: 8px;
+}
+.register-form {
+  box-shadow: -2px 2px 12px 1px rgb(0 0 0 / 20%);
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+}
+.register-form > input {
+  border-radius: 8px;
+  height: 20px;
+  margin-bottom: 10px;
+  border: 1.2px solid rgb(198, 197, 197);
+  width: 94%;
+}
+form > input {
+  border-radius: 8px;
+  height: 20px;
+  margin-bottom: 10px;
+  border: 1.2px solid rgb(198, 197, 197);
+}
+form > button {
+  width: 100%;
+  height: 35px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: medium;
+  font-weight: 600;
+  cursor: pointer;
+}
+form > p {
+  text-align: center;
+  margin: 15px 0 15px 0;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+form > p > a {
+  text-decoration: none;
+}
+.h-line {
+  width: 100%;
+  border: 0.5px solid rgb(196, 196, 196);
+}
+.container-new-account {
+  display: flex;
+  justify-content: center;
+}
+.new-account {
+  background-color: rgb(26, 208, 26);
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 10px;
+  width: 50%;
+  border-radius: 5px;
+}
+.new-account a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+.new-account a:visited {
+  text-decoration: white;
+}
+.new-account a:active {
+  text-decoration: white;
+}
+
+/* register */
+.register-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+  gap: 50px;
+  font-family: sans-serif;
+}
+.radio-form {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+.radio-form > input{
+  width: 20px;
+}
+.register-form > section {
+  margin: 0 0 15px 0;
+}
+.date-birth {
+  color: rgb(71, 71, 71);
+}

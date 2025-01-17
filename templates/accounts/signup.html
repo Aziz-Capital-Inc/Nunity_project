@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%load static%}
+
+
+{%block content%}
+
+<section class="register-section">
+    <div class="login-head">
+        <p>Nunity</p>
+        <p>A unified point to share, discuss and sell "taste"<br> that shape our individuality.</p>
+    </div>
+    <form class="register-form" method="post">
+        {% csrf_token %}
+        {{ form.username }}<br>
+        {{ form.email }}<br>
+        {{ form.device }}<br>
+        <label class="date-birth" for="dob">Gender:</label>
+        {{ form.gender }}<br><br>
+        <label class="date-birth" for="dob">Date of Birth:</label>
+        {{ form.date_of_birth }}
+        {{ form.password }}<br>
+        {{ form.confirm_password }}<br>
+        <button type="submit">Create account</button><br>
+        <div class="h-line"></div>
+        <div class="container-new-account">
+        </div>
+    </form>
+
+
+
+{%endblock content%}
