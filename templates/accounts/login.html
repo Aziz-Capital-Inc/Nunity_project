@@ -1,46 +1,60 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <div>
-    <section class="login-section">
-        <div>
-            <div class="login-head">
-                <p>Nunity</p>
-                <p>A unified point to share, discuss, and sell "taste" that shape our individuality.</p>
+  <section class="login-section">
+    <div>
+      <div class="login-head">
+        <p>Nunity</p>
+        <p>
+          A unified point to share, discuss, and sell "taste" that shape our
+          individuality.
+        </p>
+      </div>
+      <div>
+        <!-- Django Login Form -->
+        <form class="login-form" method="post">
+          {% csrf_token %}
+
+          <!-- Username Field -->
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+            required
+            value="{{ form.username.value|default:'' }}"
+          /><br />
+
+          <!-- Password Field -->
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+          /><br />
+          {% if form.errors %}
+          <p style="color: red">Login credentials are incorrect.</p>
+          {% endif %}
+          <!-- Submit Button -->
+          <button type="submit">Log in</button><br />
+
+          <!-- Forgotten Password Link -->
+          <p>
+            <a href="#">Forgotten password?</a>
+          </p>
+
+          <!-- Divider Line -->
+          <div class="h-line"></div>
+
+          <!-- New Account Link -->
+          <div class="container-new-account">
+            <div class="new-account">
+              <a href="{%url 'user-register'%}">Create new account</a>
             </div>
-            <div>
-                <!-- Django Login Form -->
-                <form class="login-form" method="post">
-                    {% csrf_token %}
-                    
-                    <!-- Username Field -->
-                    <input type="text" name="username" id="username" placeholder="Username" required value="{{ form.username.value|default:'' }}"><br>
-                    
-                    <!-- Password Field -->
-                    <input type="password" name="password" id="password" placeholder="Password" required><br>
-                    {% if form.errors %}
-                    <p style="color: red;">Login credentials are incorrect.</p>
-                    {% endif %}
-                    <!-- Submit Button -->
-                    <button type="submit">Log in</button><br>
-
-                    <!-- Forgotten Password Link -->
-                    <p>
-                        <a href="#">Forgotten password?</a>
-                    </p>
-
-                    <!-- Divider Line -->
-                    <div class="h-line"></div>
-
-                    <!-- New Account Link -->
-                    <div class="container-new-account">
-                        <div class="new-account">
-                            <a href="#">Create new account</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
 </div>
 {% endblock content %}
